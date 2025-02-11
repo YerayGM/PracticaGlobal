@@ -31,8 +31,8 @@ const Search = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {filteredAgents.map((agent) => (
           <Link key={agent.uuid} to={`/agent/${agent.uuid}`} className="bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 p-4">
-            <h2 className="text-xl font-bold">{agent.displayName}</h2>
-            <p>{agent.description}</p>
+            <h2 className="text-xl text-white font-bold">{agent.displayName}</h2>
+            <p className='text-white'>{agent.description}</p>
           </Link>
         ))}
       </div>

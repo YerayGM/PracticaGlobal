@@ -29,11 +29,16 @@ const searchReducer = (state, action) => {
 const SearchProvider = ({ children }) => {
   const [state, dispatch] = useReducer(searchReducer, initialState);
 
-  const { data, loading, error } = useFetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true');
+  const { data, error } = useFetch('https://valorant-api.com/v1/agents?isPlayableCharacter=true');
 
   useEffect(() => {
     if (data) {
-      dispatch({ type: 'SET_AGENTS', payload: data.data });
+      const agents = data.data.map(agent => ({
+        ...agent,
+        isCompetitiveTier: agent.role && agent.role.displayName === 'Competitive Tier',
+        isBundle: agent.role && agent.role.displayName === 'Bundle'
+      }));
+      dispatch({ type: 'SET_AGENTS', payload: agents });
     }
     if (error) {
       dispatch({ type: 'SET_ERROR', payload: error });

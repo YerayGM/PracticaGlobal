@@ -5,6 +5,7 @@ const Footer = () => {
       <p>
         <a href="/privacy-policy" className="underline">Política de Privacidad</a> |
         <a href="/terms-of-service" className="underline"> Términos de Servicio</a>
+        <img src="../IMG/image.png" />
       </p>
     </footer>
   );
