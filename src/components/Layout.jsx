@@ -6,9 +6,10 @@ const Layout = ({ children }) => {
     <div className="flex flex-col min-h-screen">
       <nav className="bg-blue-600 p-4 shadow-md">
         <ul className="flex justify-around text-white">
-          <li><Link to="/">Agentes</Link></li>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/agents">Agentes</Link></li>
           <li><Link to="/bundles">Paquetes</Link></li>
-          <li><Link to="/competitive-tiers">Tier Competitivo</Link></li>
+          <li><Link to="/competitive-tiers">Clasificaciones</Link></li>
           <li><Link to="/search">Buscar</Link></li>
         </ul>
       </nav>
