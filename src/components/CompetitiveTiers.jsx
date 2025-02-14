@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { SearchContext } from '../Context/SearchContext';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const CompetitiveTiers = () => {
   const { state } = useContext(SearchContext);
@@ -16,7 +17,13 @@ const CompetitiveTiers = () => {
   }
 
   if (!tiers.length) {
-    return <p>No se encontraron clasificaciones competitivas.</p>;
+    return (
+      <DotLottieReact
+        src="https://lottie.host/8656b581-5008-4ebe-a2b3-071aca81c547/GhOfE9NTvM.lottie"
+        loop
+        autoplay
+      />
+    );
   }
 
   return (
