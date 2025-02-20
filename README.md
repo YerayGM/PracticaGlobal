@@ -10,7 +10,7 @@ Currently, two official plugins are available:
 # Valorant Guide
 
 ## Descripción
-Esta es una guía de personajes y tienda de bundles de Valorant.
+Esta es una guía de personajes y vista de bundles de Valorant.
 
 ## Dependencias
 - React
